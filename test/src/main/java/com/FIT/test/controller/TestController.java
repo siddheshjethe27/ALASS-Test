@@ -2,9 +2,14 @@ package com.FIT.test.controller;
 
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.FIT.test.businessObjects.Data;
 
 @RestController
 @RequestMapping("/api")
@@ -18,10 +23,17 @@ public class TestController
 	}
     
     @RequestMapping("/HighestAmongNeighbours")
-	public int[] HighestAmongNeighbours(int[] numbers) { 
+	public String HighestAmongNeighbours(int[] arr) { 
     	
-    	int[] ans = new int[numbers.length];
-
+    	String ans = "";
+    	return ans;
+	
+	}
+    
+    @RequestMapping("/returnAll")
+	public List<Data> returnAll() { 
+    	
+    	List<Data> ans = new ArrayList<>();
     	return ans;
 	
 	}
